@@ -83,22 +83,22 @@
                 </executions>
             </plugin>
 
-            <!-- JaCoCo for code coverage -->
+            <!-- ✅ FIXED JaCoCo Plugin -->
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
                 <version>0.7.2.201409121644</version>
                 <executions>
                     <execution>
-                        <id>jacoco-initialize</id>
-                        <phase>process-resources</phase>
+                        <id>prepare-agent</id>
                         <goals>
                             <goal>prepare-agent</goal>
                         </goals>
+                        <phase>initialize</phase>
                     </execution>
                     <execution>
-                        <id>jacoco-site</id>
-                        <phase>post-integration-test</phase>
+                        <id>report</id>
+                        <phase>verify</phase>
                         <goals>
                             <goal>report</goal>
                         </goals>
@@ -303,11 +303,6 @@
                                 <plugin>
                                     <artifactId>maven-project-info-reports-plugin</artifactId>
                                     <version>2.7</version>
-                                </plugin>
-                                <plugin>
-                                    <groupId>org.jacoco</groupId>
-                                    <artifactId>jacoco-maven-plugin</artifactId>
-                                    <version>0.7.2.201409121644</version>
                                 </plugin>
                             </reportPlugins>
                         </configuration>
