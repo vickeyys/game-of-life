@@ -12,7 +12,7 @@ pipeline {
     stages {
         stage('git checkout') {
             steps {
-                git branch: "${params.branch}", url: 'https://github.com/vickeyys/game-of-life.git', credentialsId: 'github-id'
+                git branch: "${params.branch}", url: 'https://github.com/vickeyys/game-of-life.git', credentialsId: 'github1-id'
             }
         }
         stage('mvn package') {
