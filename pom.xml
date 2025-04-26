@@ -20,6 +20,17 @@
         <jelastic.context>gameoflife</jelastic.context>
         <jelastic.environment>wakaleo</jelastic.environment>
     </properties>
+<distributionManagement>
+    <snapshotRepository>
+        <id>artifactory-snapshots</id>
+        <url>https://vickeyy.jfrog.io/artifactory/vickey-repo-libs-snapshot-local/</url>
+    </snapshotRepository>
+    <repository>
+        <id>artifactory-releases</id>
+        <url>https://your-artifactory-server/artifactory/libs-release-local</url>
+    </repository>
+</distributionManagement>
+
 
     <scm>
         <connection>scm:git:git@github.com:${github.account}/game-of-life.git</connection>
