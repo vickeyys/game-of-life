@@ -149,7 +149,6 @@
             <version>1.3</version> <!-- Updated to Hamcrest 1.3 -->
             <scope>test</scope>
         </dependency>
-        <!-- Updated Mockito version -->
         <dependency>
             <groupId>org.mockito</groupId>
             <artifactId>mockito-core</artifactId>
